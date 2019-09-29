@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 27, 2019 at 05:33 PM
+-- Generation Time: Sep 29, 2019 at 07:51 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -29,9 +29,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `siswa` (
-  `idSiswa` int(11) NOT NULL,
-  `namaSiswa` varchar(50) NOT NULL,
   `nisn` int(12) NOT NULL,
+  `namaSiswa` varchar(50) NOT NULL,
   `jenisKelamin` int(1) NOT NULL,
   `tanggalLahir` date NOT NULL,
   `alamat` varchar(50) NOT NULL,
@@ -42,6 +41,26 @@ CREATE TABLE `siswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `siswa`
+--
+
+INSERT INTO `siswa` (`nisn`, `namaSiswa`, `jenisKelamin`, `tanggalLahir`, `alamat`, `asalSekolah`, `namaAyah`, `namaIbu`, `minatBakat`) VALUES
+(12312312, 'Abdurrafi Yahya', 1, '1986-07-28', 'asdsa', 'SMP 21 Jakarta Barat', 'asda', 'asdasdsa', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `idUser` int(11) NOT NULL,
+  `namaUser` varchar(50) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
 -- Indexes for dumped tables
 --
 
@@ -49,17 +68,23 @@ CREATE TABLE `siswa` (
 -- Indexes for table `siswa`
 --
 ALTER TABLE `siswa`
-  ADD PRIMARY KEY (`idSiswa`);
+  ADD PRIMARY KEY (`nisn`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`idUser`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `siswa`
+-- AUTO_INCREMENT for table `user`
 --
-ALTER TABLE `siswa`
-  MODIFY `idSiswa` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `user`
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

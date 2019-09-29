@@ -1,7 +1,7 @@
 <?php
-class M_Siswa extends CI_Model {
+class MainModel extends CI_Model {
 
-	function tampil() {
+	function tampilSiswa() {
 		return $this->db->get('siswa');
 	}
 	function input_data($data, $table){

@@ -5,7 +5,7 @@
   </head>
   <body>
 	<?php include 'navbar.php'; ?>
-    <h1>Hello, world!</h1>
+    <h1>Hai, Selamat Datang di Website PPDB</h1>
 	<?php include 'footer.php'; ?>
   </body>
 </html>

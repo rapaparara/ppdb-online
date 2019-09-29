@@ -2,11 +2,12 @@
 class Pendaftaran extends CI_Controller {
 	function __construct(){
 		parent::__construct();
-		$this->load->model('M_siswa');
+		$this->load->model('MainModel');
+		$this->load->helper('url');
 	}
 
 	public function Index(){
-		$data['siswa'] = $this->M_siswa->tampil()->result();
+		$data['siswa'] = $this->MainModel->tampilSiswa()->result();
 		$this->load->view('v_pendaftaran',$data);
 	}
 	function input_data(){
@@ -31,7 +32,7 @@ class Pendaftaran extends CI_Controller {
 				'minatBakat' => $minatBakat
 		);
 
-		$this->M_siswa->input_data($data,'siswa');
+		$this->MainModel->input_data($data,'siswa');
 		redirect('pendaftaran');
 	}
 }

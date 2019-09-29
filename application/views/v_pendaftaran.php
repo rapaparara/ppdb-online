@@ -6,7 +6,8 @@
 <body>
 	<?php include 'navbar.php'; ?>
 <div class="container">
-	<div class="col-sm-5">
+	<div class="row">
+	<div class="col-5 col-sm-5">
 	<h3>Masukkan data Siswa</h3>
 	<form action="pendaftaran/input_data" method="POST">
 		<div class="form-group">
@@ -38,7 +39,28 @@
 		<button type="submit" class="btn btn-success mt-3">Simpan</button>
 	</div>
 	</form>
+	</div>	<div class="col-3 col-sm-3">
+	<h3>Siswa yang terdaftar</h3>
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th>NISN</th>
+				<th>Nama</th>
+				<th>Asal Sekolah</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($siswa as $s) {?>
+			<tr>
+				<td><?php echo $s->nisn ?></td>
+				<td><?php echo $s->namaSiswa ?></td>
+				<td><?php echo $s->asalSekolah ?></td>
+			</tr>
+		<?php } ?>
+		</tbody>
+	</table>
 	</div>
+</div>
 </div>
 	<?php include 'footer.php'; ?>
 </body>
