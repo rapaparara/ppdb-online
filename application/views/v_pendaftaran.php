@@ -5,9 +5,11 @@
 </head>
 <body>
 	<?php include 'navbar.php'; ?>
-<div class="container">
+<div class="container mt-3">
 	<div class="row">
-	<div class="col-5 col-sm-5">
+	<div class="col-sm-5 mt-3">
+		<div class="card" style="background-color: #e0e0e0;">
+			<div class="card-body">
 	<h3>Masukkan data Siswa</h3>
 	<form action="pendaftaran/input_data" method="POST">
 		<div class="form-group">
@@ -34,12 +36,16 @@
 		<select class="form-control" name="minatBakat">
 			<option value="1">Olahraga</option>
 			<option value="2">Kesenian</option>
-			<option value="2">Pramuka</option>
+			<option value="3">Kepramukaan</option>
 		</select>
 		<button type="submit" class="btn btn-success mt-3">Simpan</button>
 	</div>
 	</form>
-	</div>	<div class="col-3 col-sm-3">
+			</div>
+		</div>
+	</div>
+
+	<div class="col-sm-7 mt-3">
 	<h3>Siswa yang terdaftar</h3>
 	<table class="table table-bordered table-hover">
 		<thead>
