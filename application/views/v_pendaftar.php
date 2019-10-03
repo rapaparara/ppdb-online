@@ -5,7 +5,7 @@
 </head>
 <body>
 	<?php include 'navbar.php'; ?>
-<div class="container mt-3">
+<div class="container mt-5">
 	<div class="row">
 	<div class="col-sm">
 		<div class="card">
