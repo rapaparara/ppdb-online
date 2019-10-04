@@ -50,7 +50,6 @@
 	<table class="table table-bordered table-hover">
 		<thead>
 			<tr>
-				<th>NISN</th>
 				<th>Nama</th>
 				<th>Asal Sekolah</th>
 			</tr>
@@ -58,7 +57,6 @@
 		<tbody>
 			<?php foreach ($siswa as $s) {?>
 			<tr>
-				<td><?php echo $s->nisn ?></td>
 				<td><?php echo $s->namaSiswa ?></td>
 				<td><?php echo $s->asalSekolah ?></td>
 			</tr>

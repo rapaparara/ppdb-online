@@ -4,14 +4,14 @@
 	<?php include 'header.php'; ?>
 </head>
 <body>
-	<?php include 'navbar.php'; ?>
+	<?php include 'navbar_admin.php'; ?>
 <div class="container mt-5">
 	<div class="row">
 	<div class="col-sm">
 		<div class="card">
 			<div class="card-body">
 	<h3>Siswa yang terdaftar</h3>
-	<table class="table  table-hover table-responsive">
+	<table class="table  table-hover table-responsive table-bordered">
 		<thead>
 			<tr>
 				<th>NISN</th>

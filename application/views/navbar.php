@@ -6,15 +6,12 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="<?php echo base_url('') ?>">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
+      <li class="nav-item <?php if($this->uri->segment(1)=='pendaftaran'){echo 'active';}?>">
         <a class="nav-link" href="<?php echo base_url('pendaftaran') ?>">Pendaftaran</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          Pengumuman
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Action</a>
@@ -24,5 +21,6 @@
         </div>
       </li>
     </ul>
+    <a class="btn btn-outline-dark" role=button href="<?php echo base_url('admin/') ?>">Masuk</a>
   </div>
 </nav>
