@@ -38,7 +38,7 @@
 			<option value="2">Kesenian</option>
 			<option value="3">Kepramukaan</option>
 		</select>
-		<button type="submit" class="btn btn-success mt-3">Simpan</button>
+		<button type="submit" class="btn btn-success mt-3">Daftar</button>
 	</div>
 	</form>
 			</div>

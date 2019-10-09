@@ -40,7 +40,7 @@
 						echo "Kepramukaan";
 					}
 				?></td>
-				<td><a href="edit?id=<?php echo $s->nisn; ?>">Edit </a><a href="hapus?id=<?php echo $s->nisn; ?>">Hapus</a></td>
+				<td><a href="pendaftar/edit/<?php echo $s->nisn; ?>">Edit </a><a href="pendaftar/hapus/<?php echo $s->nisn; ?>">Hapus</a></td>
 			</tr>
 		<?php } ?>
 		</tbody>

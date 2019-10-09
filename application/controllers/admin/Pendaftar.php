@@ -10,7 +10,8 @@ class Pendaftar extends CI_Controller{
 		$this->load->view('v_pendaftar',$data);
 	}
 	function edit($id){
-		$data = $this->db->where('nisn',$id);
+		$where = array('nisn'=>$id);
+		$data['pendaftar'] = $this->MainModel->tampilSiswaById($where)->result();
 		$this->load->view('v_editpendaftar',$data);
 
 	}
