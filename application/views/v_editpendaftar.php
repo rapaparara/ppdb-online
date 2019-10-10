@@ -11,7 +11,7 @@
 		<div class="card" style="background-color: #e0e0e0;">
 			<div class="card-body">
 	<h3>Masukkan data Siswa</h3>
-	<form action="pendaftaran/input_data" method="POST">
+	<form action="<?php echo base_url('admin/pendaftar/update'); ?>" method="POST">
 		<div class="form-group">
 		<?php foreach($pendaftar as $p) { ?>
 		<label>Nama Siswa : </label>
@@ -39,7 +39,9 @@
 			<option value="2" <?php if($p->minatBakat==2) echo "selected" ?> >Kesenian</option>
 			<option value="3" <?php if($p->minatBakat==3) echo "selected" ?> >Kepramukaan</option>
 		</select>
-		<button type="submit" class="btn btn-success mt-3">Simpan</button>
+		<button type="submit" class="btn btn-sm btn-success mt-3">Simpan</button>
+		<button type="reset" class="btn btn-sm btn-danger mt-3">Reset</button>
+		<a href="javascript:history.go(-1)"><button type="button" class="btn btn-sm btn-secondary mt-3" >Batal</button></a>
 	</div>
 	<?php } ?>
 	</form>

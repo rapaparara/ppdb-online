@@ -7,7 +7,7 @@ class Pendaftaran extends CI_Controller {
 	}
 
 	public function Index(){
-		$data['siswa'] = $this->MainModel->tampilSiswa()->result();
+		$data['siswa'] = $this->MainModel->tampilSemuaSiswa()->result();
 		$this->load->view('v_pendaftaran',$data);
 	}
 	function input_data(){
